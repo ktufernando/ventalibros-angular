@@ -25,7 +25,7 @@
     "affected:lint": "./node_modules/.bin/nx affected:lint",
     "affected:libs": "./node_modules/.bin/nx affected:libs",
     "heroku-postbuild": "ng build --prod",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -50,7 +50,7 @@
     "rxjs": "6.3.3",
     "rxjs-compat": "6.0.0",
     "tslib": "^1.9.3",
-    "typescript": "~3.4.5",
+    "typescript": "~3.2.4",
     "zone.js": "^0.8.29"
   },
   "devDependencies": {
@@ -82,7 +82,7 @@
     "protractor": "~5.3.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
-    "typescript": "~3.4.5"
+    "typescript": "~3.2.4"
   },
   "engines": {
     "node": "11.13.0",

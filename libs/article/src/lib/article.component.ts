@@ -26,6 +26,7 @@ const structure: Field[] = [
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ArticleComponent implements OnInit, OnDestroy {
+  loading: any;
   article$: Observable<ArticleData>;
   comments$: Observable<ArticleComment[]>;
   canModify = false;

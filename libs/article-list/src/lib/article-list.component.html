@@ -1,9 +1,9 @@
 <div class="app-article-preview" [hidden]="!(isLoading$ | async)">
-	Loading articles...
+	Buscando libros...
 </div>
 
 <div class="app-article-preview" [hidden]="(isLoading$ | async) || (articles$ | async).length > 0">
-	No articles are here... yet.
+	No hay libros aquí... todavía.
 </div>
 
 <app-article-list-item [hidden]="isLoading$ | async" (navigateToArticle)="navigateToArticle($event)" (unFavorite)="unFavorite($event)"

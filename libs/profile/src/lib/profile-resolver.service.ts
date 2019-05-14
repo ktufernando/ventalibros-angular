@@ -29,7 +29,7 @@ export class ProfileArticlesResolverService implements Resolve<Profile> {
         ...articleListInitialState.listConfig,
         filters: {
           ...articleListInitialState.listConfig.filters,
-          author: username
+          buyer: username
         }
       })
     );

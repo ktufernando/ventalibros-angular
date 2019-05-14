@@ -1,0 +1,7 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [true, "attribute", "angular-ngrx-nx-realworld-example-app", "camelCase"],
+    "component-selector": [true, "element", "angular-ngrx-nx-realworld-example-app", "kebab-case"]
+  }
+}

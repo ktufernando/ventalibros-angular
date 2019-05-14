@@ -48,6 +48,10 @@ export class ProfileComponent implements OnInit, OnDestroy {
     }
   }
 
+  logout() {
+    this.authFacade.logout();
+  }
+
   ngOnDestroy() {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();

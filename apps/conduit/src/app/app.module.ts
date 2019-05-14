@@ -28,7 +28,8 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
         { path: 'article/:slug', loadChildren: '@angular-ngrx-nx-realworld-example-app/article#ArticleModule' },
         { path: 'settings', loadChildren: '@angular-ngrx-nx-realworld-example-app/settings#SettingsModule' },
         { path: 'editor', loadChildren: '@angular-ngrx-nx-realworld-example-app/editor#EditorModule' },
-        { path: 'profile/:username', loadChildren: '@angular-ngrx-nx-realworld-example-app/profile#ProfileModule' }
+        { path: 'profile/:username', loadChildren: '@angular-ngrx-nx-realworld-example-app/profile#ProfileModule' },
+        { path: 'mp/payment/success', loadChildren: '@angular-ngrx-nx-realworld-example-app/mercadopago#MercadopagoModule' }
       ],
       {
         initialNavigation: 'enabled',

@@ -9,13 +9,13 @@ const structure: Field[] = [
   {
     type: 'INPUT',
     name: 'email',
-    placeholder: 'Username',
+    placeholder: 'Usuario',
     validator: [Validators.required]
   },
   {
     type: 'INPUT',
     name: 'password',
-    placeholder: 'Password',
+    placeholder: 'Contraseña',
     validator: [Validators.required],
     attrs: {
       type: 'password'

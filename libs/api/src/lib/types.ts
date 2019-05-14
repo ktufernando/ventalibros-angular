@@ -23,7 +23,13 @@ export interface ArticleData {
   updatedAt: string;
   favorited: boolean;
   favoritesCount: number;
-  author: Profile;
+  author: Author;
+  images: string[];
+}
+
+export interface Author {
+  name: string;
+  image: String
 }
 
 export interface User {

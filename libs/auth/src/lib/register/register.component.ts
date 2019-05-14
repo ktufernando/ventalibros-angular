@@ -9,7 +9,7 @@ const structure: Field[] = [
   {
     type: 'INPUT',
     name: 'username',
-    placeholder: 'Username',
+    placeholder: 'Usuario',
     validator: [Validators.required]
   },
   {
@@ -21,7 +21,7 @@ const structure: Field[] = [
   {
     type: 'INPUT',
     name: 'password',
-    placeholder: 'Password',
+    placeholder: 'Contraseña',
     validator: [Validators.required],
     attrs: {
       type: 'password'

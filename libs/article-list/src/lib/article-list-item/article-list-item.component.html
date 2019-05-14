@@ -4,9 +4,9 @@
 			<img [src]="article.author.image" />
 		</a>
 		<div class="info">
-			<a class="author" [routerLink]="['/profile', article.author.username]">
-				{{ article.author.username }}
-			</a>
+			<span class="author">
+				{{ article.author.name }}
+			</span>
 			<span class="date">
 				{{ article.createdAt | date: 'longDate' }}
 			</span>
@@ -20,7 +20,7 @@
 	<a (click)=navigateToArticle.emit(article.slug) class="preview-link">
 		<h1>{{article.title}}</h1>
 		<p>{{article.description}}</p>
-		<span>Read more...</span>
+		<span>Ver más...</span>
 		<ul class="tag-list">
 			<li class="tag-default tag-pill tag-outline" *ngFor="let tag of article.tagList">
 				{{ tag }}

@@ -23,12 +23,10 @@ export const articleInitialState: Article = {
     updatedAt: '',
     favorited: false,
     favoritesCount: 0,
+    images: [],
     author: {
-      username: '',
-      bio: '',
-      image: '',
-      following: false,
-      loading: false
+      name: '',
+      image: ''
     }
   },
   comments: [],
@@ -66,7 +64,7 @@ export function articleReducer(state: Article = articleInitialState, action: Art
     }
     case ArticleActionTypes.FOLLOW_SUCCESS:
     case ArticleActionTypes.UNFOLLOW_SUCCESS: {
-      const data: ArticleData = { ...state.data, author: action.payload };
+      const data: ArticleData = { ...state.data};
       return { ...state, data };
     }
     case ArticleActionTypes.FAVORITE_SUCCESS:

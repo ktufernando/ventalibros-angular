@@ -5,9 +5,9 @@
 	<app-dynamic-form class="card-block" (updateForm)="updateForm.emit($event)" [data$]="data$" [structure$]="structure$" [touchedForm$]="touchedForm$">
 	</app-dynamic-form>
 	<div class="card-footer">
-		<img [src]="currentUser.image" class="comment-author-img" />
+		<img [hidden]="!currentUser.image" [src]="currentUser.image" class="comment-author-img" />
 		<button (click)="submit.emit(article.slug)" class="btn btn-sm btn-primary" type="submit">
-			Post Comment
+			Enviar Comentario
 		</button>
 	</div>
 </div>

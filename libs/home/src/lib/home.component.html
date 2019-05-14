@@ -2,22 +2,22 @@
 
 	<div class="banner">
 		<div class="container">
-			<h1 class="logo-font">conduit</h1>
-			<p>A place to share your knowledge.</p>
+			<h1 class="logo-font">Mercado de libros</h1>
+			<p>El lugar donde podes conseguir libros ilegalmente.</p>
 		</div>
 	</div>
 
 	<div class="container page">
 		<div class="row">
 
-			<div class="col-md-9">
+			<div class="col-xs-12 col-md-9">
 				<div class="feed-toggle">
 					<ul class="nav nav-pills outline-active">
-						<li class="nav-item">
+						<!--li class="nav-item">
 							<a [ngClass]="{'active': (listConfig$|async)?.type === 'FEED'}" class="nav-link" (click)="setListTo('FEED')">Your Feed</a>
-						</li>
+						</li-->
 						<li class="nav-item">
-							<a [ngClass]="{'active': (listConfig$|async)?.type === 'ALL' && !(listConfig$|async).filters?.tag}" class="nav-link" (click)="setListTo('ALL')">Global Feed</a>
+							<a [ngClass]="{'active': (listConfig$|async)?.type === 'ALL' && !(listConfig$|async).filters?.tag}" class="nav-link" (click)="setListTo('ALL')">Nuestra colección</a>
 						</li>
 						<li class="nav-item" [hidden]="!(listConfig$|async).filters?.tag">
 							<a class="nav-link active">
@@ -31,7 +31,7 @@
 
 			</div>
 
-			<div class="col-md-3">
+			<div class="col-xs-12 col-md-3">
 				<div class="sidebar">
 					<app-tags-list (setListTag)="setListTag($event)" [tags]="(tags$ | async)"></app-tags-list>
 				</div>

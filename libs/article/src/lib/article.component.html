@@ -2,24 +2,33 @@
 	<div class="banner">
 		<div class="container">
 			<h1>{{ (article$|async).title }}</h1>
-			<app-article-meta [article]="article$ | async" (follow)="follow($event)" (unfollow)="unfollow($event)" (favorite)="favorite($event)"
-			 (unfavorite)="unfavorite($event)" (delete)="delete($event)" [canModify]="canModify">
-			</app-article-meta>
+			<div class="row">
+				<div class="col-xs-12">
+					<app-article-meta [article]="article$ | async" (follow)="follow($event)" (unfollow)="unfollow($event)" (favorite)="favorite($event)"(unfavorite)="unfavorite($event)" (delete)="delete($event)" [canModify]="canModify">
+					</app-article-meta>
+					<button *ngIf="article$ | async; let article; else loading" (click)="buy(article.slug)" class="btn btn-lg btn-warning pull-xs-right" type="button">
+						Comprar
+					</button>
+				</div>
+			</div>
 		</div>
 	</div>
 
 	<div class="container page">
 		<div class="row article-content">
-			<div class="col-md-12">
+			<div class="col-xs-12">
 				<div [innerHTML]="(article$ | async)?.body | markdown"></div>
 			</div>
 		</div>
-		<hr />
-		<div class="article-actions">
-			<app-article-meta [article]="article$ | async" (follow)="follow($event)" (unfollow)="unfollow($event)" (favorite)="favorite($event)"
-			 (unfavorite)="unfavorite($event)" (delete)="delete($event)" [canModify]="canModify"></app-article-meta>
+		
+		<div class="row">
+			<div class="col-xs-12">
+				<button *ngIf="article$ | async; let article; else loading" (click)="buy(article.slug)" class="btn btn-lg btn-warning pull-xs-right" type="button">
+					Comprar
+				</button>
+			</div>
 		</div>
-
+		<hr />
 		<div class="row">
 			<div class="col-xs-12 col-md-8 offset-md-2">
 
@@ -28,8 +37,8 @@
 				</app-add-comment>
 
 				<div *ngIf="!(isAuthenticated$ | async)">
-					<a [routerLink]="['/login']">Sign in</a> or
-					<a [routerLink]="['/register']">sign up</a> to add comments on this article.
+					<a [routerLink]="['/login']">Ingresa</a> o
+					<a [routerLink]="['/register']">Registrate</a> para enviar un comentario.
 				</div>
 
 				<app-article-comment *ngFor="let comment of (comments$ | async)" [currentUser]="currentUser$|async" (delete)="deleteComment($event)"

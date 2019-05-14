@@ -19,7 +19,7 @@ export interface ArticleListConfig {
 
 export interface Filters {
   tag?: string;
-  author?: string;
+  buyer?: string;
   favorited?: string;
   limit?: number;
   offset?: number;

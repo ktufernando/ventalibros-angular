@@ -1,5 +1,6 @@
 import { ArticleComment, ArticleData, User } from '@angular-ngrx-nx-realworld-example-app/api';
 import { AuthFacade } from '@angular-ngrx-nx-realworld-example-app/auth';
+import { MercadopagoService } from '@angular-ngrx-nx-realworld-example-app/mercadopago';
 import { Field, NgrxFormsFacade } from '@angular-ngrx-nx-realworld-example-app/ngrx-forms';
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
@@ -11,7 +12,7 @@ const structure: Field[] = [
   {
     type: 'TEXTAREA',
     name: 'comment',
-    placeholder: 'Write a comment...',
+    placeholder: 'Escribi un comentario...',
     attrs: {
       rows: 3
     }
@@ -38,7 +39,8 @@ export class ArticleComponent implements OnInit, OnDestroy {
   constructor(
     private ngrxFormsFacade: NgrxFormsFacade,
     private facade: ArticleFacade,
-    private auhtFacade: AuthFacade
+    private auhtFacade: AuthFacade,
+    private mpService: MercadopagoService
   ) {}
 
   ngOnInit() {
@@ -88,5 +90,12 @@ export class ArticleComponent implements OnInit, OnDestroy {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
     this.facade.initializeArticle();
+  }
+
+  buy(slug: string) {
+    this.mpService.getPaymentLink(slug).subscribe(link => {
+      window.location.href = link;
+    });;
+
   }
 }

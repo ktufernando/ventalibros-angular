@@ -20,13 +20,11 @@ export const editorInitialState: Editor = {
     createdAt: '',
     updatedAt: '',
     favorited: false,
+    images: [],
     favoritesCount: 0,
     author: {
-      username: '',
-      bio: '',
-      image: '',
-      following: false,
-      loading: false
+      name: '',
+      image: ''
     }
   }
 };

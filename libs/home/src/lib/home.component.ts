@@ -49,11 +49,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   getArticles() {
-    if (this.isAuthenticated) {
-      this.setListTo('FEED');
-    } else {
-      this.setListTo('ALL');
-    }
+    this.setListTo('ALL');
   }
 
   setListTag(tag: string) {

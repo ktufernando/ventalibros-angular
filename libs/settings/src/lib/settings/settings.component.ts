@@ -12,19 +12,19 @@ const structure: Field[] = [
   {
     type: 'INPUT',
     name: 'image',
-    placeholder: 'URL of profile picture',
+    placeholder: 'URL de tu imagen de perfil',
     validator: []
   },
   {
     type: 'INPUT',
     name: 'username',
-    placeholder: 'Your Name',
+    placeholder: 'Tú nombre de usuario',
     validator: [Validators.required]
   },
   {
     type: 'TEXTAREA',
     name: 'bio',
-    placeholder: 'Short bio about you',
+    placeholder: 'Corta biografía sobre vos',
     validator: []
   },
   {
@@ -36,7 +36,7 @@ const structure: Field[] = [
   {
     type: 'INPUT',
     name: 'password',
-    placeholder: 'New Password',
+    placeholder: 'Nueva contraseña',
     validator: [Validators.required],
     attrs: {
       type: 'password'

@@ -1,1 +1,19 @@
+.article-img {
+    float: left;
+    max-height: 200px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
 
+.article-content {
+    font-size: 0.8rem;
+    color: #777;
+}
+.article-content-2 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #2b2b2b;
+}
+.article-buy {
+    margin-top: 10px;
+}

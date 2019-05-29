@@ -29,7 +29,8 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
         { path: 'settings', loadChildren: '@angular-ngrx-nx-realworld-example-app/settings#SettingsModule' },
         { path: 'editor', loadChildren: '@angular-ngrx-nx-realworld-example-app/editor#EditorModule' },
         { path: 'profile/:username', loadChildren: '@angular-ngrx-nx-realworld-example-app/profile#ProfileModule' },
-        { path: 'mp/payment/success', loadChildren: '@angular-ngrx-nx-realworld-example-app/mercadopago#MercadopagoModule' }
+        { path: 'mp/payment/success', loadChildren: '@angular-ngrx-nx-realworld-example-app/mercadopago#MercadopagoModule' },
+        { path: 'mp/payment/failure', loadChildren: '@angular-ngrx-nx-realworld-example-app/home#HomeModule' }
       ],
       {
         initialNavigation: 'enabled',

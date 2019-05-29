@@ -20,11 +20,15 @@
 	<a (click)=navigateToArticle.emit(article.slug) class="preview-link">
 		<h1>{{article.title}}</h1>
 		<p>{{article.description}}</p>
-		<span>Ver más...</span>
+		<span *ngIf="!purchased">Ver más...</span>
+		
 		<ul class="tag-list">
 			<li class="tag-default tag-pill tag-outline" *ngFor="let tag of article.tagList">
 				{{ tag }}
 			</li>
 		</ul>
 	</a>
+	<button *ngIf="purchased" (click)="download(article.slug)" class="btn btn-sm btn-primary" type="submit">
+		Descargar
+	</button>
 </div>

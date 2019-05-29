@@ -14,6 +14,7 @@ export interface ArticleComment {
 }
 
 export interface ArticleData {
+  id: string;
   slug: string;
   title: string;
   description: string;
@@ -38,4 +39,5 @@ export interface User {
   username: string;
   bio: string;
   image: string;
+  purchases: string[];
 }

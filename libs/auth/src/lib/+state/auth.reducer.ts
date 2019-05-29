@@ -22,7 +22,8 @@ export const authInitialState: Auth = {
     token: '',
     username: '',
     bio: '',
-    image: ''
+    image: '',
+    purchases: null
   }
 };
 

@@ -11,6 +11,7 @@ import { articleListInitialState, articleListReducer } from './+state/article-li
 import { ArticleListItemComponent } from './article-list-item/article-list-item.component';
 import { ArticleListComponent } from './article-list.component';
 import { ArticleListService } from './article-list.service';
+import { DownloadService } from './article-list-item/download.service';
 
 @NgModule({
   imports: [
@@ -21,7 +22,7 @@ import { ArticleListService } from './article-list.service';
     EffectsModule.forFeature([ArticleListEffects])
   ],
   declarations: [ArticleListComponent, ArticleListItemComponent],
-  providers: [ArticleListService, ArticleListEffects, ArticleListFacade],
+  providers: [ArticleListService, ArticleListEffects, ArticleListFacade, DownloadService],
   exports: [ArticleListComponent]
 })
 export class ArticleListModule {}

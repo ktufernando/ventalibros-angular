@@ -12,6 +12,7 @@ export interface EditorState {
 
 export const editorInitialState: Editor = {
   article: {
+    id: '',
     slug: '',
     title: '',
     description: '',

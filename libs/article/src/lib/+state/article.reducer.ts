@@ -14,6 +14,7 @@ export interface ArticleState {
 
 export const articleInitialState: Article = {
   data: {
+    id: '',
     slug: '',
     title: '',
     description: '',

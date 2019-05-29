@@ -19,4 +19,8 @@ export class ArticleListService {
   private toHttpParams(params) {
     return Object.getOwnPropertyNames(params).reduce((p, key) => p.set(key, params[key]), new HttpParams());
   }
+
+  download(slug: string): Observable<any> {
+    return this.apiService.get('/file/'+slug);
+  }
 }

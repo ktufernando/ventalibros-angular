@@ -7,7 +7,7 @@
 					<app-article-meta [article]="article$ | async" (follow)="follow($event)" (unfollow)="unfollow($event)" (favorite)="favorite($event)"(unfavorite)="unfavorite($event)" (delete)="delete($event)" [canModify]="canModify">
 					</app-article-meta>
 					<button *ngIf="article$ | async; let article; else loading" (click)="buy(article.slug)" class="btn btn-lg btn-warning pull-xs-right article-buy" type="button">
-						Comprar (${{(article$ | async)?.value}})
+						Comprar (${{(article$ | async)?.value}}ARS)
 					</button>
 				</div>
 			</div>
@@ -36,7 +36,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<button *ngIf="article$ | async; let article; else loading" (click)="buy(article.slug)" class="btn btn-lg btn-warning pull-xs-right" type="button">
-					Comprar (${{(article$ | async)?.value}})
+					Comprar (${{(article$ | async)?.value}}ARS)
 				</button>
 			</div>
 		</div>
